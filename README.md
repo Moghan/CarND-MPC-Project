@@ -9,10 +9,15 @@ Actuators are steering angle and throttle.
 
 ### Update equations
 x(t+1) = x(t) + v(t) * cos(psi) * dt
+
 y(t+1) = y(t) + v(t) * sin(psi) * dt
+
 psi(t+1) = psi(t) + v(t) / Lf * steering_angle(t) * dt
+
 v(t+1) = v(t) + throttle(t) * dt
+
 cte(t+1) = f(x(t)) - y(t) + (v(t) * sin(epsi) * dt)
+
 epsi(t+1) = psi(t) - psides(t) + (v(t) / Lf * steering_angle(t) * dt)
 
 
