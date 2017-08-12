@@ -23,7 +23,7 @@ const double Lf = 2.67;
 
 double ref_cte = 0;
 double ref_epsi = 0;
-double ref_v = 80;
+double ref_v = 60;
 
 size_t x_start = 0;
 size_t y_start = x_start + N;
@@ -202,7 +202,7 @@ vector<double> MPC::Solve(Eigen::VectorXd state, Eigen::VectorXd coeffs) {
   options += "Sparse  true        reverse\n";
   // NOTE: Currently the solver has a maximum time limit of 0.5 seconds.
   // Change this as you see fit.
-  options += "Numeric max_cpu_time          0.5\n";
+  options += "Numeric max_cpu_time          0.8\n";
 
   // place to return solution
   CppAD::ipopt::solve_result<Dvector> solution;
